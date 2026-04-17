@@ -10,7 +10,7 @@
       border-style:none;
       cursor:pointer;
       color:white;
-      width: 20px;
+      width: 30px;
       height: 15px;
       font-size: 120%;
       }
@@ -18,13 +18,17 @@
       width: 100%;
       height: 100%;
       }
-    div.bottons-container {
+    div.bottons-container {      
       background-color:black;
-      flex-grow: 999
+      flex-grow: 999;
       }
     div.player {
       display: flex;
       flex-direction:column;
+    }
+    div.between-the-buttons {
+      width: 697px;
+      display:inline-block;
     }
   </style>
 </head>
@@ -44,6 +48,10 @@
       </button>
       <button class="js-volume-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
+      </button>
+        <div class="between-the-buttons"></div>
+      <button class="js-fullscreen-button">
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
     </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
