@@ -13,20 +13,32 @@
       width: 10px;
       height: 10px;
       }
+    div.js-video-container {
+      width: 100%;
+      height: 100%;
+      }
+    div.bottons-container {
+      background-color:black;
+      flex-grow: 999
+      }
+    div.player {
+      display: flex;
+      flex-direction:column;
+    }
   </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px; box-shadow: 0 0 10px rgba(0,0,0,10);">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
+  <div class="player" id="player" style="width: 800px; height: 900px; box-shadow: 0 0 10px rgba(0,0,0,10);">
+    <div class="js-video-container"></div>
     <!-- Here can be placed player controls: play and volume buttons -->
-    <div style="background-color:black">
+    <div class="bottons-container">
       <button class="js-play-button">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
       <button class="js-pause-button">
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-  </div>
+    </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
   <script src="player.js"></script>
