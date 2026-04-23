@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles/css/font-awesome.min.css">
   <title>Видеоплеер</title>
@@ -36,7 +37,23 @@
       box-shadow: 0 0 10px rgba(0,0,0,10);    
     }
     .between-the-buttons {
+      display: flex;
+      flex-direction: row;
+      background-color: black;
       flex-grow: 1;
+      font-family: "Roboto Slab", serif;
+    }
+    .js-current-time {
+      color: white;
+
+    }
+    .js-duration {
+      color: white;
+    }
+    .js-progress {
+
+      flex-grow: 1;
+
     }
   </style>
 </head>
@@ -44,6 +61,7 @@
   <div class="player" id="player">
     <div class="js-video-container"></div>
     <!-- Here can be placed player controls: play and volume buttons -->
+
     <div class="bottons-container">
       <button class="js-play-button player-button">
         <i class="fa fa-play fa-xl" aria-hidden="true"></i>
@@ -57,7 +75,15 @@
       <button class="js-volume-button player-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-        <div class="between-the-buttons"></div>
+
+        <div class="between-the-buttons">
+          <span class="js-current-time"></span>
+          <div class="js-progress">           
+           
+          </div>
+          <span class="js-duration"></span>
+        </div>
+
       <button class="js-fullscreen-button player-button">
         <i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
