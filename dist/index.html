@@ -13,7 +13,7 @@
       cursor:pointer;
       color:white;
       margin-right:4pt;
-      margin-left:2pt;
+      margin-left:1pt;
       width: 30px;
       height: 44px;      
       font-size: 15pt;
@@ -42,18 +42,43 @@
       background-color: black;
       flex-grow: 1;
       font-family: "Roboto Slab", serif;
+      margin: 10px 0px 4px;
     }
     .js-current-time {
       color: white;
-
+      width: 50px;
     }
     .js-duration {
       color: white;
+      width: 50px;
+
     }
     .js-progress {
-
+      display: flex;
+      flex-direction: row;
       flex-grow: 1;
 
+    }
+    .js-progress-slider {
+      height: 5px;
+      margin-top: 10px;
+      margin-left: 12px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 10px;
+      background-color: #f8104d;
+
+    }
+    .dot {
+      margin-top: 5px;      
+      color: white ;
+      height: 8px;
+      width: 8px;
+      background-color: #f8104d;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white;
+      border-radius: 25px;
     }
   </style>
 </head>
@@ -79,7 +104,10 @@
         <div class="between-the-buttons">
           <span class="js-current-time"></span>
           <div class="js-progress">           
-           
+            <div class="js-progress-slider">
+              
+            </div>
+            <span class="dot"></span>
           </div>
           <span class="js-duration"></span>
         </div>
