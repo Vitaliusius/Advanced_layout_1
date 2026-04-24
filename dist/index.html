@@ -4,38 +4,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles/css/font-awesome.min.css">
-  <title>Видеоплеер</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <title>Видеоплеер для ГОСТФильм</title>
   <meta charset="utf-8">
   <style type="text/css">
+    .input:focus {
+      color:white;
+    }
     .player-button {
       background-color:transparent;
-      border-style:none;
-      cursor:pointer;
-      color:white;
-      margin-right:4pt;
-      margin-left:1pt;
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      margin-right: 3.5pt;
+      margin-left: 1.5pt;
       width: 30px;
       height: 44px;      
       font-size: 15pt;
-      padding:2pt;
+      padding: 2pt;
       border: 2pt;
       }
     .js-video-container {
       flex-grow: 1;
       }
     .bottons-container {
+      margin-left: 1pt;
       display: flex; 
-      flex-direction:row;    
-      background-color:black;
+      flex-direction: row;    
+      background-color: black;
       }
     .player {
-      flex-direction:column;
-      background-color:black;
+      flex-direction: column;
+      background-color: black;
       display: flex;
       width: 800px;
       height: 600px;
       box-shadow: 0 0 10px rgba(0,0,0,10);    
-    }
+      }
     .between-the-buttons {
       display: flex;
       flex-direction: row;
@@ -43,22 +48,31 @@
       flex-grow: 1;
       font-family: "Roboto Slab", serif;
       margin: 10px 0px 4px;
-    }
+      }
     .js-current-time {
+      font-size:16px;
+      margin-top: 2px;
       color: white;
       width: 50px;
-    }
+      }
     .js-duration {
+      font-size:16px;
+      margin-top: 2.5px;
+      margin-right: 4px;
       color: white;
       width: 50px;
-
-    }
+      }
     .js-progress {
       display: flex;
       flex-direction: row;
       flex-grow: 1;
-
-    }
+      }
+    .js-progress:hover .dot {
+      opacity: 0;    
+      transition-property: opacity;
+      transition-duration: 300ms;
+      transition-timing-function: ease-out, ease-in;
+      }
     .js-progress-slider {
       height: 5px;
       margin-top: 10px;
@@ -67,9 +81,12 @@
       flex-direction: row;
       border-radius: 10px;
       background-color: #f8104d;
-
-    }
+      }
     .dot {
+      opacity:1;
+      transition-property: opacity;
+      transition-duration: 300ms;
+      transition-timing-function: ease-out, ease-in;
       margin-top: 5px;      
       color: white ;
       height: 8px;
@@ -79,7 +96,8 @@
       border-width: 3px;
       border-color: white;
       border-radius: 25px;
-    }
+      }
+
   </style>
 </head>
 <body>
@@ -100,20 +118,16 @@
       <button class="js-volume-button player-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-
         <div class="between-the-buttons">
           <span class="js-current-time"></span>
           <div class="js-progress">           
-            <div class="js-progress-slider">
-              
-            </div>
+            <div class="js-progress-slider"></div>
             <span class="dot"></span>
           </div>
           <span class="js-duration"></span>
         </div>
-
       <button class="js-fullscreen-button player-button">
-        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+        <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
