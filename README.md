@@ -1,6 +1,6 @@
 # Видеоплеер для ГОСТФильм
 
-Это сайт видеоплеера с примитивными настройками. [Вот](https://vitaliusius.github.io/Advanced_layout_1/dist/index.html) его адрес.
+Это сайт видеоплеера ГОСТфильма [Вот](https://vitaliusius.github.io/Advanced_layout_1/dist/index.html) его адрес.
 
 ## Запуск другого видео
 
